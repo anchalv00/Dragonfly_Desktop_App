@@ -13,6 +13,9 @@ window.addEventListener('DOMContentLoaded', () => {
   let randomIndex = Math.floor(Math.random() * dragonImagesList.length);
   let chosenDragonImg = dragonImagesList[randomIndex];
 
+  window.api.setDragon(chosenDragonImg);
+  window.api.setRandomInt(randomIndex);
+
   dragonImg.style.display = "block";
   dragonImg.src = chosenDragonImg;
 
