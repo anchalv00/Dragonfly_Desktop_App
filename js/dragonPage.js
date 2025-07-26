@@ -1,6 +1,10 @@
 window.addEventListener('DOMContentLoaded', () => {
 
   const dragonImg = document.getElementById('dragonImg');
+  const buttonAudio = document.getElementById('buttonAudio');
+  const feedButton = document.getElementById('feedBtn');
+  const trainingButton = document.getElementById('trainBtn');
+
 
   let dragonImagesList = ["../assets/images/red-dragon.png", "../assets/images/blue-dragon.png", "../assets/images/green-dragon.png"]
 
@@ -11,10 +15,25 @@ window.addEventListener('DOMContentLoaded', () => {
   dragonImg.style.display = "block";
   dragonImg.src = chosenDragonImg;
 
-
   dragonImg.addEventListener('click', () => {
     console.log("Dragon Button clicked");
-
-
+ 
   });
+
+  feedButton.addEventListener('click', () => {
+    console.log("Feed Button clicked");
+    buttonAudio.play();
+    setTimeout(() => {
+
+    }, 1500); 
+  });
+
+  trainingButton.addEventListener('click', () => {
+    console.log("Training Button clicked");
+    buttonAudio.play();
+    setTimeout(() => {
+
+    }, 1500); 
+  });
+
 });
