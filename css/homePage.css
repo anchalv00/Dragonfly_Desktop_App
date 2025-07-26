@@ -7,6 +7,10 @@
        url('https://fonts.gstatic.com/s/itim/v1/ZVWlXdoBE70CciTWc1Gqcw.ttf') format('truetype');
 }
 
+audio {
+  display: none;
+}
+
 .home_screen_container {
   position: relative;
   width: 100%;
