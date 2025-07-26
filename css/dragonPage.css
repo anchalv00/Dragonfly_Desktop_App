@@ -1,3 +1,12 @@
+/* credit: https://gist.github.com/sadikay/d5457c52e7fb2347077f5b0fe5ba9300 */
+@font-face {
+  font-family: 'Itim';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Itim'), local('Itim-Regular'),
+       url('https://fonts.gstatic.com/s/itim/v1/ZVWlXdoBE70CciTWc1Gqcw.ttf') format('truetype');
+}
+
 .frame-7,
 .frame-7 * {
   box-sizing: border-box;
@@ -33,7 +42,7 @@
 .feed {
   color: #000000;
   text-align: center;
-  font-family: "Itim-Regular", sans-serif;
+  font-family: 'Itim', cursive;
   font-size: 20px;
   letter-spacing: 0.25em;
   font-weight: 400;
@@ -60,7 +69,7 @@
 .train {
   color: #000000;
   text-align: center;
-  font-family: "Itim-Regular", sans-serif;
+  font-family: 'Itim', cursive;
   font-size: 20px;
   letter-spacing: 0.25em;
   font-weight: 400;
@@ -120,7 +129,7 @@
 ._1 {
   color: #000000;
   text-align: center;
-  font-family: "Itim-Regular", sans-serif;
+  font-family: 'Itim', cursive;
   font-size: 36px;
   letter-spacing: 0.25em;
   font-weight: 400;
@@ -131,7 +140,7 @@
 ._10 {
   color: #000000;
   text-align: center;
-  font-family: "Itim-Regular", sans-serif;
+  font-family: 'Itim', cursive;
   font-size: 20px;
   letter-spacing: 0.25em;
   font-weight: 400;

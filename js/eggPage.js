@@ -1,6 +1,10 @@
 window.addEventListener('DOMContentLoaded', () => {
 
   const eggBtn = document.getElementById('eggImg');
+  // const clickText2 = document.getElementById('click_text_2');
+  // const clickText3 = document.getElementById('click_text_3');
+  // const clickText4 = document.getElementById('click_text_4');
+
 
   let eggImagesList = ["../assets/images/red-1.png", "../assets/images/blue-1.png", "../assets/images/green-1.png"]
 
@@ -31,5 +35,11 @@ window.addEventListener('DOMContentLoaded', () => {
     if (clickCount > 5) {
         window.api.goToDragonPage();
     }
+
+    const clickText = document.getElementById(`clickText${clickCount}`);
+    if (clickText) {
+      clickText.style.display = "block";
+    }
+
   });
 });

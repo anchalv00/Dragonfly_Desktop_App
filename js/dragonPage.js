@@ -6,7 +6,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
 
   let randomIndex = Math.floor(Math.random() * dragonImagesList.length);
-  let chosenDragonImg = DragonImagesList[randomIndex];
+  let chosenDragonImg = dragonImagesList[randomIndex];
 
   dragonImg.style.display = "block";
   dragonImg.src = chosenDragonImg;
