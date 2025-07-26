@@ -19,12 +19,12 @@ function createWindow() {
 
 ipcMain.on("load-egg-page", () => {
     console.log("Loading egg page");
-    win.loadFile('eggPage.html');
+    win.loadFile('html/eggPage.html');
 })
 
 ipcMain.on("load-dragon-page", () => {
     console.log("Loading dragon page");
-    win.loadFile('dragonPage.html');
+    win.loadFile('html/dragonPage.html');
 })
 
 app.whenReady().then(createWindow);
