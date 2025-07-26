@@ -4,6 +4,7 @@ window.addEventListener('DOMContentLoaded', () => {
   const buttonAudio = document.getElementById('buttonAudio');
   const feedButton = document.getElementById('feedBtn');
   const trainingButton = document.getElementById('trainBtn');
+  const metricsBtn = document.getElementById('metricsBtn');
 
 
   let dragonImagesList = ["../assets/images/red-dragon.png", "../assets/images/blue-dragon.png", "../assets/images/green-dragon.png"]
@@ -26,6 +27,16 @@ window.addEventListener('DOMContentLoaded', () => {
     setTimeout(() => {
 
     }, 1500); 
+
+    module.exports = {
+        chosenDragonImg
+    };
+
+
+  metricsBtn.addEventListener('click', () => {
+    console.log("Metrics Button clicked");
+
+    window.api.goToMetricsPage();
   });
 
   trainingButton.addEventListener('click', () => {
