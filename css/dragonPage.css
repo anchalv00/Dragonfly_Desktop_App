@@ -89,7 +89,7 @@ audio {
   font-weight: 400;
 }
 
-.red-dragon-1 {
+.dragon-img {
   display: none;
   width: 265px;
   height: 265px;
@@ -177,4 +177,15 @@ audio {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.level-up-img {
+  display: none;
+  width: 250px;
+  height: 250px;
+  position: absolute;
+  left: 70px;
+  top: 130px;
+  object-fit: cover;
+  aspect-ratio: 1;
 }

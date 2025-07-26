@@ -5,6 +5,7 @@ window.addEventListener('DOMContentLoaded', () => {
   const feedButton = document.getElementById('feedBtn');
   const trainingButton = document.getElementById('trainBtn');
   const metricsBtn = document.getElementById('metricsBtn');
+  const levelUpImg = document.getElementById('levelUpImg');
 
   const levelNum = document.getElementById('levelNum');
 
@@ -17,16 +18,26 @@ window.addEventListener('DOMContentLoaded', () => {
   let levelBarProgress = 0;
 
   const levelBar = new ProgressBar.Line('#levelBar', {
-        // strokeWidth: 4,
         color: '#FE9284',
-        // trailColor: '#eee',
-        // trailWidth: 1,
         duration: 500,
         easing: 'easeInOut',
         svgStyle: { width: '100%', height: '100%' },
     });
 
   levelBar.set(levelBarProgress);
+
+
+  let trainBarProgress = 0;
+
+  const trainBar = new ProgressBar.Line('#trainBar', {
+        color: '#FE9284',
+        duration: 500,
+        easing: 'easeInOut',
+        svgStyle: { width: '100%', height: '100%' },
+    });
+
+  trainBar.set(trainBarProgress);
+
 
   let dragonImagesList = ["../assets/images/red-dragon.png", "../assets/images/blue-dragon.png", "../assets/images/green-dragon.png"]
 
@@ -39,6 +50,14 @@ window.addEventListener('DOMContentLoaded', () => {
 
   dragonImg.style.display = "block";
   dragonImg.src = chosenDragonImg;
+
+
+  function showLevelUpImage() {
+    levelUpImg.style.display = "block";
+    setTimeout(() => {
+      levelUpImg.style.display = "none";
+    }, 2000);
+  }
 
   dragonImg.addEventListener('click', () => {
     console.log("Dragon Button clicked");
@@ -59,6 +78,7 @@ window.addEventListener('DOMContentLoaded', () => {
       levelBarProgress = 0;
       levelBar.set(levelBarProgress);
       levelNum.textContent = (Number(levelNum.textContent) + 1).toString();
+      showLevelUpImage();
     }
 
 
@@ -115,6 +135,20 @@ window.addEventListener('DOMContentLoaded', () => {
         levelBarProgress = 0;
         levelBar.set(levelBarProgress);
         levelNum.textContent = (Number(levelNum.textContent) + 1).toString();
+        showLevelUpImage();
+      }
+
+      if (trainBarProgress < 1) {
+        trainBarProgress += 0.1;
+        trainBar.set(trainBarProgress);
+      }
+
+      if (trainBarProgress >= 1) {         
+        trainBarProgress = 0;
+        trainBar.set(levelBarProgress);
+        levelBar.set(0);
+        levelNum.textContent = (Number(levelNum.textContent) + 1).toString();
+        showLevelUpImage();
       }
 
       setTimeout(() => {
