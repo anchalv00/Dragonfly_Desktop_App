@@ -1,6 +1,8 @@
 window.addEventListener('DOMContentLoaded', () => {
 
   const dragonImg = document.getElementById('dragonImg');
+  const metricsBtn = document.getElementById('metricsBtn');
+
 
   let dragonImagesList = ["../assets/images/red-dragon.png", "../assets/images/blue-dragon.png", "../assets/images/green-dragon.png"]
 
@@ -11,10 +13,14 @@ window.addEventListener('DOMContentLoaded', () => {
   dragonImg.style.display = "block";
   dragonImg.src = chosenDragonImg;
 
+    module.exports = {
+        chosenDragonImg
+    };
 
-  dragonImg.addEventListener('click', () => {
-    console.log("Dragon Button clicked");
 
+  metricsBtn.addEventListener('click', () => {
+    console.log("Metrics Button clicked");
 
+    window.api.goToMetricsPage();
   });
 });

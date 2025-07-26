@@ -164,3 +164,32 @@
   left: 73px;
   top: 368px;
 }
+
+.metrics-btn {
+  background: #f6eac2;
+  border-style: solid;
+  border-color: #b8794d;
+  border-width: 3px;
+  width: 86px;
+  height: 35px;
+  position: absolute;
+  left: 289px;
+  top: 95px;
+}
+
+.metrics-btn-text {
+  color: #000000;
+  text-align: center;
+  font-family: "Itim-Regular", sans-serif;
+  font-size: 20px;
+  letter-spacing: 0.25em;
+  font-weight: 400;
+  position: absolute;
+  left: 289px;
+  top: 97px;
+  width: 86px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

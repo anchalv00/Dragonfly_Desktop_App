@@ -29,4 +29,9 @@ ipcMain.on("load-dragon-page", () => {
     win.loadFile(path.join(__dirname, 'html', 'dragonPage.html'));
 })
 
+ipcMain.on("load-metrics-page", () => {
+    console.log("Loading metrics page");
+    win.loadFile(path.join(__dirname, 'html', 'metricsPage.html'));
+})
+
 app.whenReady().then(createWindow);
