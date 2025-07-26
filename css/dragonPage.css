@@ -99,6 +99,7 @@ audio {
   object-fit: cover;
   aspect-ratio: 1;
 }
+
 .loadbar-rectangle {
   background: #f6eac2;
   border-style: solid;
@@ -109,6 +110,7 @@ audio {
   position: absolute;
   left: 203px;
   top: 54px;
+  overflow: hidden;
 }
 
 
@@ -124,7 +126,7 @@ audio {
   left: 324px;
   top: 18px;
 }
-._1 {
+.level-number {
   color: #000000;
   text-align: center;
   font-family: 'Itim', cursive;
