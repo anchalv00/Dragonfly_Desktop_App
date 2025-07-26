@@ -1,6 +1,8 @@
 window.addEventListener('DOMContentLoaded', () => {
 
   const eggBtn = document.getElementById('eggImg');
+  const crackAudio = document.getElementById('crackAudio');
+
   // const clickText2 = document.getElementById('click_text_2');
   // const clickText3 = document.getElementById('click_text_3');
   // const clickText4 = document.getElementById('click_text_4');
@@ -20,26 +22,29 @@ window.addEventListener('DOMContentLoaded', () => {
 
   eggBtn.addEventListener('click', () => {
     console.log("Egg Button clicked");
+    crackAudio.currentTime = 0;
+    crackAudio.playbackRate = 3;
+    crackAudio.play();
 
-    clickCount++;
-    
-    if (randomIndex == 0) {
+    // Wait for audio to finish before changing the egg image
+    setTimeout(() => {
+      clickCount++;
+      if (randomIndex == 0) {
         eggBtn.src = `../assets/images/red-${clickCount}.png`;
-    }else if (randomIndex == 1) {
+      } else if (randomIndex == 1) {
         eggBtn.src = `../assets/images/blue-${clickCount}.png`;
-    }else if (randomIndex == 2) {
+      } else if (randomIndex == 2) {
         eggBtn.src = `../assets/images/green-${clickCount}.png`;
-    }
+      }
 
-
-    if (clickCount > 5) {
+      if (clickCount > 5) {
         window.api.goToDragonPage();
-    }
+      }
 
-    const clickText = document.getElementById(`clickText${clickCount}`);
-    if (clickText) {
-      clickText.style.display = "block";
-    }
-
+      const clickText = document.getElementById(`clickText${clickCount}`);
+      if (clickText) {
+        clickText.style.display = "block";
+      }
+    }, crackAudio.duration * 300); 
   });
 });
