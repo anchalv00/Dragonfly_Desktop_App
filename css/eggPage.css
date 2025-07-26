@@ -57,7 +57,7 @@
   aspect-ratio: 1;
 }
 
-click_text {
+.click_text {
   color: #000000;
   text-align: center;
   font-family: "Itim-Regular", sans-serif;
