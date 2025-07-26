@@ -27,11 +27,7 @@ window.addEventListener('DOMContentLoaded', () => {
     setTimeout(() => {
 
     }, 1500); 
-
-    module.exports = {
-        chosenDragonImg
-    };
-
+  });
 
   metricsBtn.addEventListener('click', () => {
     console.log("Metrics Button clicked");
