@@ -158,7 +158,6 @@ window.addEventListener('DOMContentLoaded', () => {
     setTimeout(() => {
 
     }, 1500); 
-
   });
 
 
@@ -175,8 +174,9 @@ window.addEventListener('DOMContentLoaded', () => {
       trainBarProgress: trainBarProgress,
       levelBarProgress: levelBarProgress
     });
-
-    window.api.goToMetricsPage();
+    setTimeout(() => {
+      window.api.goToMetricsPage();
+    }, 800);
   });
 
   const timer = document.getElementById('timer');
