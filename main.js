@@ -9,8 +9,8 @@ let savedProgress = {};
 
 function createWindow() {
    win = new BrowserWindow({
-    width: 400,
-    height: 500,
+    width: 437,
+    height: 585,
     webPreferences: {
       preload: path.join(__dirname, 'preload.js'),
       contextIsolation: true,  
