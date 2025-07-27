@@ -1,14 +1,49 @@
 window.addEventListener('DOMContentLoaded', () => {
 
- const {chosenDragonImg} = require('js\dragonPage.js');
-
  const dragonImg = document.getElementById('dragonImg');
+ const dragonName = document.getElementById('dragonName');
+ const dragonOrigin = document.getElementById('dragonOrigin');  
+ const dragonType = document.getElementById('dragonType');
 
- dragonImg.src = chosenDragonImg;
  dragonImg.style.display = "block";
 
-  button.addEventListener('click', () => {
-    console.log("Button clicked");
-    window.api.goToEggPage();
-  });
+
+let redDragonMetrics = ["Blaze", "Volcanic Island", "Fire"];
+let blueDragonMetrics = ["Bluey", "Icy Atlantic", "Water"];
+let greenDragonMetrics = ["Brownie", "West Jungle", "Earth"];
+
+
+window.api.getDragon().then((chosenDragonImg) => {
+    if (chosenDragonImg) {
+      console.log("Chosen Dragon Image:", chosenDragonImg);
+      document.getElementById('dragonImg').src = chosenDragonImg;
+    }
+});
+
+window.api.getRandomInt().then((randomInt) => {
+  console.log("Random Int:", randomInt);
+  const randomIntConverted = Number(randomInt);
+
+  if (randomIntConverted >= 0 && randomIntConverted < 3) {
+    console.log("Chosen Random Int:", randomIntConverted);
+    if (randomIntConverted == 0) {
+      dragonName.textContent = redDragonMetrics[0];
+      dragonOrigin.textContent = redDragonMetrics[1];
+      dragonType.textContent = redDragonMetrics[2];
+    } else if (randomIntConverted == 1) {
+      dragonName.textContent = blueDragonMetrics[0];
+      dragonOrigin.textContent = blueDragonMetrics[1];
+      dragonType.textContent = blueDragonMetrics[2];
+    } else if (randomIntConverted == 2) {
+      dragonName.textContent = greenDragonMetrics[0];
+      dragonOrigin.textContent = greenDragonMetrics[1];
+      dragonType.textContent = greenDragonMetrics[2];
+    }
+    dragonName.classList.remove('hidden');
+    dragonOrigin.classList.remove('hidden');
+    dragonType.classList.remove('hidden');
+  }
+    
+});
+
 });
