@@ -1,0 +1,79 @@
+/* credit: https://gist.github.com/sadikay/d5457c52e7fb2347077f5b0fe5ba9300 */
+@font-face {
+  font-family: 'Itim';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Itim'), local('Itim-Regular'),
+       url('https://fonts.gstatic.com/s/itim/v1/ZVWlXdoBE70CciTWc1Gqcw.ttf') format('truetype');
+}
+
+audio {
+  display: none;
+}
+
+.home_screen_container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-color: #f0f0f0;
+  overflow: hidden;
+}
+
+.home_screen {
+  background: #cce2cb;
+  border-style: solid;
+  border-color: #b8794d;
+  border-width: 3px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 1;
+}
+
+.home_screen_content {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  pointer-events: auto;
+}
+
+.dragonfly_title {
+  color: #000000;
+  text-align: center;
+  font-family: 'Itim', cursive;
+  font-size: 36px;
+  letter-spacing: 0.25em;
+  font-weight: 400;
+}
+
+.red-dragon-img {
+  width: 315px;
+  height: 315px;
+  object-fit: cover;
+  aspect-ratio: 1;
+}
+
+.start_btn {
+  background: #f6eac2;
+  border-style: solid;
+  border-color: #b8794d;
+  border-width: 3px;
+  width: 269px;
+  height: 70px;
+}
+
+.start_btn_text {
+  color: #000000;
+  text-align: left;
+  font-family: 'Itim', cursive;
+  font-size: 36px;
+  letter-spacing: 0.25em;
+  font-weight: 400;
+}
