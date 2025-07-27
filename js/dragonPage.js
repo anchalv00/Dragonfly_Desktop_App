@@ -109,7 +109,6 @@ window.addEventListener('DOMContentLoaded', () => {
     setTimeout(() => {
 
     }, 1500); 
-
   });
 
 

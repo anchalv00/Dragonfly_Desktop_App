@@ -81,24 +81,24 @@ audio {
 }
 
 .click_text_1 {
-  left: 31px;
+  left: 200px;
   top: 344px;
 }
 
 .click_text_2 {
   display: none;
-  left: 239px;
-  top: 409px;
+  left: 100px;
+  top: 500px;
 }
 
 .click_text_3 {
   display: none;
-  left: 73.13px;
-  top: 191.07px;
+  left: 600px;
+  top: 300px;
 }
 
 .click_text_4 {
   display: none;
-  left: 297.6px;
-  top: 132.35px;
+  left: 650px;
+  top: 600px;
 }
