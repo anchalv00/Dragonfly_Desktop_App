@@ -1,16 +1,3 @@
-/* credit: https://gist.github.com/sadikay/d5457c52e7fb2347077f5b0fe5ba9300 */
-@font-face {
-  font-family: 'Itim';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Itim'), local('Itim-Regular'),
-       url('https://fonts.gstatic.com/s/itim/v1/ZVWlXdoBE70CciTWc1Gqcw.ttf') format('truetype');
-}
-
-audio {
-  display: none;
-}
-
 .custom-titlebar {
   -webkit-app-region: drag;
   height: 40px;
@@ -35,12 +22,25 @@ audio {
 .window-controls button:hover {
   background-color: #ffb74d;
 }
+/* credit: https://gist.github.com/sadikay/d5457c52e7fb2347077f5b0fe5ba9300 */
+@font-face {
+  font-family: 'Itim';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Itim'), local('Itim-Regular'),
+       url('https://fonts.gstatic.com/s/itim/v1/ZVWlXdoBE70CciTWc1Gqcw.ttf') format('truetype');
+}
 
-
-.frame-10,
-.frame-10 * {
-
+audio {
   display: none; 
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
 }
 
 .metric-page-container,

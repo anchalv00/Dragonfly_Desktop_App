@@ -16,5 +16,13 @@
   },
   "dependencies": {
     "play-sound": "^1.1.6"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anchalv00/Dragonfly_Desktop_App.git"
+  },
+  "bugs": {
+    "url": "https://github.com/anchalv00/Dragonfly_Desktop_App/issues"
+  },
+  "homepage": "https://github.com/anchalv00/Dragonfly_Desktop_App#readme"
 }

@@ -10,7 +10,7 @@ let savedProgress = {};
 function createWindow() {
    win = new BrowserWindow({
     width: 400,
-    height: 600,
+    height: 500,
     frame: false,
 
     width: 437,
