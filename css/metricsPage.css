@@ -1,3 +1,12 @@
+/* credit: https://gist.github.com/sadikay/d5457c52e7fb2347077f5b0fe5ba9300 */
+@font-face {
+  font-family: 'Itim';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Itim'), local('Itim-Regular'),
+       url('https://fonts.gstatic.com/s/itim/v1/ZVWlXdoBE70CciTWc1Gqcw.ttf') format('truetype');
+}
+
 .frame-10,
 .frame-10 * {
   box-sizing: border-box;
@@ -176,8 +185,8 @@
   left: 199px;
   top: 72px;
 }
-.red-dragon-1 {
-    display: none;
+.dragon-img {
+  display: none;
   width: 137px;
   height: 137px;
   position: absolute;
@@ -186,29 +195,30 @@
   object-fit: cover;
   aspect-ratio: 1;
 }
-.rectangle-202 {
+
+.exit-btn {
+  color: #000000;
+  /* text-align: center; */
+  font-family: "Itim-Regular", sans-serif;
+  font-size: 40px;
+  letter-spacing: 0.25em;
+  font-weight: 400;
+  position: absolute;
+  left: 38px;
+  top: 65px;
   background: #f6eac2;
   border-style: solid;
   border-color: #b8794d;
   border-width: 3px;
   width: 57px;
   height: 48px;
-  position: absolute;
-  left: 38px;
-  top: 65px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.x {
-  color: #000000;
-  text-align: center;
-  font-family: "Itim-Regular", sans-serif;
-  font-size: 36px;
-  letter-spacing: 0.25em;
-  font-weight: 400;
-  position: absolute;
-  left: 57px;
-  top: 65px;
-}
-.iondoichnaovnioaehndfoiahnoivhdoirhnoieoidfhaioehfoirhfhroehfoiahrfoirhoierhfoirhfoiaehoifhoirhoifhroihfoiarhfiohoiehfiohriohroihfoieroiehfiohaiorho {
+
+
+.description {
   color: #000000;
   text-align: center;
   font-family: "Itim-Regular", sans-serif;
@@ -245,4 +255,8 @@
 
 .hidden {
   display: none;
+}
+
+.exit-btn, .name, .origin, .type, .description {
+  font-family: 'Itim', cursive;
 }

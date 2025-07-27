@@ -4,6 +4,7 @@ window.addEventListener('DOMContentLoaded', () => {
  const dragonName = document.getElementById('dragonName');
  const dragonOrigin = document.getElementById('dragonOrigin');  
  const dragonType = document.getElementById('dragonType');
+ const exitBtn = document.getElementById('exitBtn');
 
  dragonImg.style.display = "block";
 
@@ -44,6 +45,14 @@ window.api.getRandomInt().then((randomInt) => {
     dragonType.classList.remove('hidden');
   }
     
+});
+
+exitBtn.addEventListener('click', () => {
+  console.log("Exit Button clicked");
+  buttonAudio.play();
+  setTimeout(() => {
+    window.api.goToDragonPage();
+  }, 1500); 
 });
 
 });

@@ -1,5 +1,6 @@
 window.addEventListener('DOMContentLoaded', () => {
 
+
   const dragonImg = document.getElementById('dragonImg');
   const buttonAudio = document.getElementById('buttonAudio');
   const feedButton = document.getElementById('feedBtn');
@@ -10,12 +11,12 @@ window.addEventListener('DOMContentLoaded', () => {
   const levelNum = document.getElementById('levelNum');
 
   let moneyBtn = document.getElementById('moneyBtn');
-  let moneyAmount = Number(moneyBtn.textContent);
+  let moneyAmount;
 
-  let trainTimeLeft = 10;
-  let feedTimeLeft = 10;
+  let trainTimeLeft;
+  let feedTimeLeft;
 
-  let levelBarProgress = 0;
+  let levelBarProgress;
 
   const levelBar = new ProgressBar.Line('#levelBar', {
         color: '#FE9284',
@@ -24,10 +25,10 @@ window.addEventListener('DOMContentLoaded', () => {
         svgStyle: { width: '100%', height: '100%' },
     });
 
-  levelBar.set(levelBarProgress);
+  // levelBar.set(levelBarProgress);
 
 
-  let trainBarProgress = 0;
+  let trainBarProgress;
 
   const trainBar = new ProgressBar.Line('#trainBar', {
         color: '#FE9284',
@@ -36,7 +37,7 @@ window.addEventListener('DOMContentLoaded', () => {
         svgStyle: { width: '100%', height: '100%' },
     });
 
-  trainBar.set(trainBarProgress);
+  // trainBar.set(trainBarProgress);
 
 
   let dragonImagesList = ["../assets/images/red-dragon.png", "../assets/images/blue-dragon.png", "../assets/images/green-dragon.png"]
@@ -45,11 +46,42 @@ window.addEventListener('DOMContentLoaded', () => {
   let randomIndex = Math.floor(Math.random() * dragonImagesList.length);
   let chosenDragonImg = dragonImagesList[randomIndex];
 
-  window.api.setDragon(chosenDragonImg);
-  window.api.setRandomInt(randomIndex);
+  
+  window.api.getProgress().then((progress) => {
+    if (progress) {
+      console.log("Progress loaded:", progress);
+      levelNum.textContent = progress.levelNum || 0;
+      moneyAmount = progress.moneyAmount || 20;
+      moneyBtn.textContent = moneyAmount.toString();
+      trainBarProgress = progress.trainBarProgress || 0;
+      levelBarProgress = progress.levelBarProgress || 0;  
+      trainBar.set(trainBarProgress);
+      levelBar.set(levelBarProgress);
+      randomIndex = progress.randomIndex;
+      chosenDragonImg = progress.chosenDragonImg;
+      dragonImg.src = chosenDragonImg;
+    }else {
+      console.log("No progress found, using default values.");
+      levelNum.textContent = "0";
+      moneyAmount = Number(moneyBtn.textContent);
+      moneyBtn.textContent = moneyAmount.toString();
+      trainBarProgress = 0;
+      levelBarProgress = 0;  
+      trainBar.set(trainBarProgress);
+      levelBar.set(levelBarProgress);
+      randomIndex = Math.floor(Math.random() * dragonImagesList.length);
+      chosenDragonImg = dragonImagesList[randomIndex];
+    }
+    console.log("Progress:", progress);
+    window.api.setDragon(chosenDragonImg);
+    window.api.setRandomInt(randomIndex);
 
-  dragonImg.style.display = "block";
-  dragonImg.src = chosenDragonImg;
+    dragonImg.style.display = "block";
+    dragonImg.src = chosenDragonImg;
+
+  });
+
+  
 
 
   function showLevelUpImage() {
@@ -116,10 +148,22 @@ window.addEventListener('DOMContentLoaded', () => {
   metricsBtn.addEventListener('click', () => {
     console.log("Metrics Button clicked");
 
+    buttonAudio.play();
+
+    window.api.saveProgress({
+      randomIndex: randomIndex,
+      chosenDragonImg: chosenDragonImg,
+      levelNum: levelNum.textContent,
+      moneyAmount: moneyAmount,
+      trainBarProgress: trainBarProgress,
+      levelBarProgress: levelBarProgress
+    });
+
     window.api.goToMetricsPage();
   });
 
   const timer = document.getElementById('timer');
+
 
 
   trainingButton.addEventListener('click', () => {
