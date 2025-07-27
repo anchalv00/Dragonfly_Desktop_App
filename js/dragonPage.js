@@ -1,5 +1,16 @@
 window.addEventListener('DOMContentLoaded', () => {
 
+  const closeBtn = document.getElementById('close-btn');
+  const minBtn = document.getElementById('min-btn');
+
+  closeBtn.addEventListener('click', () => {
+    window.api.closeWindow();
+  });
+
+  minBtn.addEventListener('click', () => {
+    window.api.minimizeWindow();
+  });
+
 
   const dragonImg = document.getElementById('dragonImg');
   const buttonAudio = document.getElementById('buttonAudio');

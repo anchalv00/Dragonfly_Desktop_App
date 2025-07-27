@@ -10,7 +10,8 @@ let savedProgress = {};
 function createWindow() {
    win = new BrowserWindow({
     width: 400,
-    height: 500,
+    height: 600,
+    frame: false,
     webPreferences: {
       preload: path.join(__dirname, 'preload.js'),
       contextIsolation: true,  
@@ -65,5 +66,14 @@ ipcMain.on('save-progress', (event, data) => {
 ipcMain.handle('get-progress', () => {
   return savedProgress;
 });
+
+ipcMain.on('close-window', () => {
+  win.close();
+});
+
+ipcMain.on('minimize-window', () => {
+  win.minimize();
+});
+
 
 app.whenReady().then(createWindow);
