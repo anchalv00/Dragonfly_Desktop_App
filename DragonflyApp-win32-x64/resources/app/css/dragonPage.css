@@ -1,0 +1,191 @@
+/* credit: https://gist.github.com/sadikay/d5457c52e7fb2347077f5b0fe5ba9300 */
+@font-face {
+  font-family: 'Itim';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Itim'), local('Itim-Regular'),
+       url('https://fonts.gstatic.com/s/itim/v1/ZVWlXdoBE70CciTWc1Gqcw.ttf') format('truetype');
+}
+
+audio {
+  display: none;
+}
+
+.dragon-page-container,
+.dragon-page-container * {
+  box-sizing: border-box;
+}
+.dragon-page-container {
+  background: #ffffff;
+  height: 500px;
+  position: relative;
+  overflow: hidden;
+}
+.inner-container {
+  background: #cce2cb;
+  border-style: solid;
+  border-color: #b8794d;
+  border-width: 3px;
+  width: 400px;
+  height: 500px;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+}
+.feed {
+  background: #f6eac2;
+  border-style: solid;
+  border-color: #b8794d;
+  border-width: 3px;
+  width: 147px;
+  height: 53px;
+  position: absolute;
+  left: 38px;
+  top: 401px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Itim-Regular", sans-serif;
+  font-size: 20px;
+  letter-spacing: 0.25em;
+  font-weight: 400;
+}
+
+.train {
+  background: #f6eac2;
+  border-style: solid;
+  border-color: #b8794d;
+  border-width: 3px;
+  width: 147px;
+  height: 53px;
+  position: absolute;
+  left: 219px;
+  top: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Itim-Regular", sans-serif;
+  font-size: 20px;
+  letter-spacing: 0.25em;
+  font-weight: 400;
+}
+
+.money {
+  background: #f6eac2;
+  border-style: solid;
+  border-color: #b8794d;
+  border-width: 3px;
+  width: 125px;
+  height: 48px;
+  position: absolute;
+  left: 26px;
+  top: 33px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Itim-Regular", sans-serif;
+  font-size: 20px;
+  letter-spacing: 0.25em;
+  font-weight: 400;
+}
+
+.dragon-img {
+  display: none;
+  width: 265px;
+  height: 265px;
+  position: absolute;
+  left: 66px;
+  top: 130px;
+  object-fit: cover;
+  aspect-ratio: 1;
+}
+
+.loadbar-rectangle {
+  background: #f6eac2;
+  border-style: solid;
+  border-color: #b8794d;
+  border-width: 3px;
+  width: 152px;
+  height: 27px;
+  position: absolute;
+  left: 203px;
+  top: 54px;
+  overflow: hidden;
+}
+
+
+.level-circle {
+  background: #f6eac2;
+  border-radius: 50%;
+  border-style: solid;
+  border-color: #b8794d;
+  border-width: 3px;
+  width: 63px;
+  height: 63px;
+  position: absolute;
+  left: 324px;
+  top: 18px;
+}
+.level-number {
+  color: #000000;
+  text-align: center;
+  font-family: 'Itim', cursive;
+  font-size: 36px;
+  letter-spacing: 0.25em;
+  font-weight: 400;
+  position: absolute;
+  left: 347px;
+  top: 25px;
+}
+
+.train-loadbar {
+  background: #f6eac2;
+  border-style: solid;
+  border-color: #b8794d;
+  border-width: 1px;
+  width: 250px;
+  height: 18px;
+  position: absolute;
+  left: 73px;
+  top: 368px;
+}
+
+.metrics-btn {
+  background: #f6eac2;
+  border-style: solid;
+  border-color: #b8794d;
+  border-width: 3px;
+  width: 86px;
+  height: 35px;
+  position: absolute;
+  left: 289px;
+  top: 95px;
+}
+
+.metrics-btn-text {
+  color: #000000;
+  text-align: center;
+  font-family: "Itim-Regular", sans-serif;
+  font-size: 20px;
+  letter-spacing: 0.25em;
+  font-weight: 400;
+  position: absolute;
+  left: 289px;
+  top: 97px;
+  width: 86px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.level-up-img {
+  display: none;
+  width: 250px;
+  height: 250px;
+  position: absolute;
+  left: 70px;
+  top: 130px;
+  object-fit: cover;
+  aspect-ratio: 1;
+}

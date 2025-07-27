@@ -1,0 +1,15 @@
+# Node modules and build output
+node_modules/
+dist/
+build/
+out/
+*.log
+*.zip
+*.exe
+*.dll
+*.pak
+*.mp4
+
+# System files
+.DS_Store
+Thumbs.db

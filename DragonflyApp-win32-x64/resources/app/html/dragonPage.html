@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Desktop App [Practice]</title>
+  <link rel="stylesheet" href="..\css\dragonPage.css" />
+  <script src="https://cdn.jsdelivr.net/npm/progressbar.js"></script>
+</head>
+<body>
+  <audio controls autoplay>
+      <source src="..\assets\audio\2-cherry-cute-bgm-271158.mp3" type="audio/ogg" loop>
+      Your browser does not support the audio element.
+  </audio>   
+  <audio id="buttonAudio" src="..\assets\audio\button-click-289742.mp3"></audio> 
+
+  <div class="dragon-page-container">
+    <div class="inner-container"></div>
+    <button class="feed" id="feedBtn">FEED</button>
+    <button class="train" id="trainBtn">TRAIN</button>
+    <img class="dragon-img" id="dragonImg" src="#" />
+    <div class="loadbar-rectangle" id="levelBar"></div>
+    <button class="money" id="moneyBtn">20</button>
+    <div class="level-circle"></div>
+    <div class="level-number" id="levelNum">1</div>
+    <div class="train-loadbar" id="trainBar"></div>
+
+    <!-- img source:"https://www.vecteezy.com/free-vector/level-up-game">Level Up Game Vectors by Vecteezy -->
+    <img class="level-up-img" id="levelUpImg" src="..\assets\images\level-up.jpg" />
+      <a href="https://www.vecteezy.com/free-vector/level-up-game">Level Up Game Vectors by Vecteezy</a>
+    </img>
+    
+
+    <button class="metrics-btn" id="metricsBtn">
+        <p class="metrics-btn-text">Metrics</p>
+    </button>
+  </div>
+
+  <script src="..\js\dragonPage.js"></script>
+
+</body>
+ 
+</html>
