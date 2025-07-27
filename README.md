@@ -5,7 +5,7 @@
 Created with an inspiration from pixel art that older games have, Dragonfly is a game where people can turn their brain off and enjoy training and growing their own dragon!
 
 ## Motivation
-Our main motivation was to show our creative side, implementing art into coding. As humans, we are creative and social creatures who like interacting with colors and depth. Dragonfly aims to show the creative side of computer science. The main feature of nurturing and caring for a dragon is something Artificial Intelligence cannot do well compared to a human. As such, we created a game based on care and growth to show humanity. 
+Our main motivation was to show our creative side, implementing art into coding. As humans, we are creative and social creatures who like interacting with colors and depth. Dragonfly aims to show the creative side of computer science. The main feature of nurturing and caring for a dragon is something Artificial Intelligence cannot do well compared to a human. In addition, the game understands the hectic world, and attempts to soothe feelings of overwhelm by creating a stress-free cozy environment. As such, we created a game based on care and growth to show humanity.
 
 Dragonfly is a product of the Computer Science Girlies Hackathon held on July 25-27th 2025. 
 
