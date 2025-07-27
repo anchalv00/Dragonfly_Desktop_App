@@ -7,5 +7,7 @@ contextBridge.exposeInMainWorld("api", {
     getDragon: () => ipcRenderer.invoke('get-dragon'),
     setRandomInt: (randomInt) => ipcRenderer.send("set-random-int", randomInt),
     getRandomInt: () => ipcRenderer.invoke("get-random-int"),
-    goToMetricsPage: () => ipcRenderer.send("load-metrics-page")
+    goToMetricsPage: () => ipcRenderer.send("load-metrics-page"),
+    saveProgress: (progressData) => ipcRenderer.send('save-progress', progressData),
+    getProgress: () => ipcRenderer.invoke('get-progress')
 });

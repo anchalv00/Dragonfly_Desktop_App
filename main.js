@@ -4,6 +4,8 @@ const path = require('path');
 let win; 
 let chosenDragon = null;
 let randomInt = 0;
+let savedProgress = {};
+
 
 function createWindow() {
    win = new BrowserWindow({
@@ -55,5 +57,13 @@ ipcMain.on("load-metrics-page", () => {
     console.log("Loading metrics page");
     win.loadFile(path.join(__dirname, 'html', 'metricsPage.html'));
 })
+
+ipcMain.on('save-progress', (event, data) => {
+  savedProgress = data;
+});
+
+ipcMain.handle('get-progress', () => {
+  return savedProgress;
+});
 
 app.whenReady().then(createWindow);
