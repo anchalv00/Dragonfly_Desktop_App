@@ -18,7 +18,8 @@ Tracks submitted: Beginner friendly track
 
 ### To run the app
 1. Install electron
-
+        
+        npm init -y
         npm install --save-dev @electron-forge/cli
 
 2. Run the application
