@@ -58,8 +58,14 @@ window.addEventListener('DOMContentLoaded', () => {
       trainBar.set(trainBarProgress);
       levelBar.set(levelBarProgress);
       randomIndex = progress.randomIndex;
-      chosenDragonImg = progress.chosenDragonImg;
+      if (progress.chosenDragonImg) {
+        chosenDragonImg = progress.chosenDragonImg;
+      } else {
+        randomIndex = Math.floor(Math.random() * dragonImagesList.length);
+        chosenDragonImg = dragonImagesList[randomIndex];
+      }
       dragonImg.src = chosenDragonImg;
+  
     }else {
       console.log("No progress found, using default values.");
       levelNum.textContent = "0";
