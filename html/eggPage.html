@@ -1,17 +1,25 @@
+<!--
+  eggPage.html
+  Egg Page for the Dragonfly Desktop App.
+  User cracks the egg by clicking, with animation and sound.
+-->
 <!DOCTYPE html>
 <html>
 <head>
   <title>Desktop App [Practice]</title>
+  <!-- Link to egg page CSS -->
   <link rel="stylesheet" href="../css/eggPage.css" />
-
 </head>
 <body>
+    <!-- Background music (hidden by CSS) -->
     <audio controls autoplay>
         <source src="..\assets\audio\2-cherry-cute-bgm-271158.mp3" type="audio/ogg" loop>
         Your browser does not support the audio element.
     </audio>   
+    <!-- Egg cracking audio -->
     <audio id="crackAudio" src="..\assets\audio\egg-cracking-6844.mp3"></audio> 
 
+    <!-- Custom draggable title bar -->
     <div class="custom-titlebar">
         <div class="drag-region">
             <span class="app-title">🐉 Dragonfly</span>
@@ -22,29 +30,28 @@
         </div>
     </div>
 
+    <!-- Main container for egg screen -->
     <div class="home_screen_container">
         <div class="home_screen"></div>
 
         <div class="home_screen_content">
-
+            <!-- Egg title and instructions -->
             <div class="egg_title">
                 <p class="egg_title_text">Click on the egg!</p>
             </div>
+            <!-- Egg image (changes as user clicks) -->
             <img class="egg_img" id="eggImg" src="#" />
+            <!-- Click text animations -->
             <div class="click_text_1" id="clickText1">click!</div>
             <div class="click_text_2" id="clickText2">click!</div>
             <div class="click_text_3" id="clickText3">click!</div>
             <div class="click_text_4" id="clickText4">click!</div>
             <div class="click_text_5" id="clickText5">click!</div>
-
         </div>
-
     </div>
 
-
-
+  <!-- Egg page JavaScript -->
   <script src="..\js\eggPage.js"></script>
 
 </body>
- 
 </html>

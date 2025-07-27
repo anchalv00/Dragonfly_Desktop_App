@@ -1,4 +1,9 @@
-/* credit: https://gist.github.com/sadikay/d5457c52e7fb2347077f5b0fe5ba9300 */
+/* eggPage.css
+  Styles for the Egg Page where users interact with the dragon egg.
+  Layout and button styles are consistent with the home page.
+*/
+
+/* Import custom font */
 @font-face {
   font-family: 'Itim';
   font-style: normal;
@@ -7,10 +12,12 @@
        url('https://fonts.gstatic.com/s/itim/v1/ZVWlXdoBE70CciTWc1Gqcw.ttf') format('truetype');
 }
 
+/* Hide audio controls */
 audio {
   display: none;
 }
 
+/* Custom draggable title bar styling */
 .custom-titlebar {
   -webkit-app-region: drag;
   height: 40px;
@@ -22,6 +29,7 @@ audio {
   font-family: 'Itim', sans-serif;
 }
 
+/* Window control buttons */
 .window-controls button {
   -webkit-app-region: no-drag;
   background: none;
@@ -32,10 +40,12 @@ audio {
   color: #333;
 }
 
+/* Hover effect for window control buttons */
 .window-controls button:hover {
   background-color: #ffb74d;
 }
 
+/* Remove scrollbars and default margins/padding */
 html, body {
   width: 100%;
   height: 100%;
@@ -44,6 +54,7 @@ html, body {
   overflow: hidden;
 }
 
+/* Main container for egg screen */
 .home_screen_container {
   position: relative;
   width: 100%;
@@ -52,6 +63,7 @@ html, body {
   overflow: hidden;
 }
 
+/* Egg screen background and border */
 .home_screen {
   background: #cce2cb;
   border-style: solid;
@@ -65,6 +77,7 @@ html, body {
   z-index: 1;
 }
 
+/* Content area for egg screen */
 .home_screen_content {
   position: relative;
   width: 400px;
@@ -77,6 +90,7 @@ html, body {
   pointer-events: auto;
 }
 
+/* Egg title box */
 .egg_title {
   background: #f6eac2;
   border-style: solid;
@@ -86,6 +100,7 @@ html, body {
   height: 70px;
 }
 
+/* Egg title text */
 .egg_title_text {
   color: #000000;
   text-align: center;
@@ -95,6 +110,7 @@ html, body {
   font-weight: 400;
 }
 
+/* Egg image styling */
 .egg_img {
   display: none;
   width: 310px;
@@ -103,6 +119,7 @@ html, body {
   aspect-ratio: 1;
 }
 
+/* Click text styles for egg cracking animation */
 .click_text_1, .click_text_2, .click_text_3, .click_text_4, .click_text_5 {
   color: #000000;
   text-align: center;
@@ -113,29 +130,26 @@ html, body {
   position: absolute; 
 }
 
+/* Positioning for each click text */
 .click_text_1 {
   left: 160px;
   top: 420px;
 }
-
 .click_text_2 {
   display: none;
   left: 300px;
   top: 250px;
 }
-
 .click_text_3 {
   display: none;
   left: 20px;
   top: 250px;
 }
-
 .click_text_4 {
   display: none;
   left: 35px;
   top: 350px;
 }
-
 .click_text_5 {
   display: none;
   left: 300px;

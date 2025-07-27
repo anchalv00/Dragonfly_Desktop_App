@@ -1,17 +1,26 @@
+<!--
+  dragonPage.html
+  Dragon Page for the Dragonfly Desktop App.
+  User can feed, train, and view dragon stats.
+-->
 <!DOCTYPE html>
 <html>
 <head>
   <title>Desktop App [Practice]</title>
+  <!-- Link to dragon page CSS and ProgressBar.js library -->
   <link rel="stylesheet" href="..\css\dragonPage.css" />
   <script src="https://cdn.jsdelivr.net/npm/progressbar.js"></script>
 </head>
 <body>
+  <!-- Background music (hidden by CSS) -->
   <audio controls autoplay>
       <source src="..\assets\audio\2-cherry-cute-bgm-271158.mp3" type="audio/ogg" loop>
       Your browser does not support the audio element.
   </audio>   
+  <!-- Button click audio -->
   <audio id="buttonAudio" src="..\assets\audio\button-click-289742.mp3"></audio> 
 
+  <!-- Custom draggable title bar -->
   <div class="custom-titlebar">
       <div class="drag-region">
           <span class="app-title">🐉 Dragonfly</span>
@@ -22,28 +31,35 @@
       </div>
   </div>
 
+  <!-- Main container for dragon page -->
   <div class="dragon-page-container">
     <div class="inner-container">
+      <!-- Feed and train buttons -->
       <button class="feed" id="feedBtn">FEED</button>
       <button class="train" id="trainBtn">TRAIN</button>
+      <!-- Dragon image (changes based on user progress) -->
       <img class="dragon-img" id="dragonImg" src="#" />
+      <!-- Level progress bar -->
       <div class="loadbar-rectangle" id="levelBar"></div>
+      <!-- Money display -->
       <button class="money" id="moneyBtn">20</button>
       <img class="money-img" id="moneyImg" src="..\assets\images\coin-img.png"/>
+      <!-- Level circle and number -->
       <div class="level-circle">
         <div class="level-number" id="levelNum">1</div>
       </div>
+      <!-- Training progress bar -->
       <div class="train-loadbar" id="trainBar"></div>
 
       <!-- img source:"https://www.vecteezy.com/free-vector/level-up-game">Level Up Game Vectors by Vecteezy -->
       <img class="level-up-img" id="levelUpImg" src="..\assets\images\level-up.jpg" alt="https://www.vecteezy.com/free-vector/level-up-game"/>
-      
+      <!-- Metrics button to view dragon stats -->
       <button class="metrics" id="metricsBtn">Metrics</button>
     </div>
   </div>
 
+  <!-- Dragon page JavaScript -->
   <script src="..\js\dragonPage.js"></script>
 
 </body>
- 
 </html>

@@ -1,3 +1,9 @@
+/*
+  main.js
+  Main Electron process for Dragonfly Desktop App.
+  Handles window creation, navigation between pages, and IPC communication.
+*/
+
 const { app, BrowserWindow, ipcMain } = require('electron');
 const path = require('path');
 
@@ -6,12 +12,12 @@ let chosenDragon = null;
 let randomInt = 0;
 let savedProgress = {};
 
-
+// Create the main application window
 function createWindow() {
    win = new BrowserWindow({
-    width: 406,
-    height: 546,
-    frame: false,
+    width: 406, // Window width matches content
+    height: 546, // Window height matches content
+    frame: false, // Custom title bar
      webPreferences: {
       preload: path.join(__dirname, 'preload.js'),
       contextIsolation: true,  
@@ -19,11 +25,12 @@ function createWindow() {
     }
   });
 
-  win.webContents.openDevTools();
+  win.webContents.openDevTools(); // Open DevTools for debugging
 
-  win.loadFile('index.html');
+  win.loadFile('index.html'); // Load the home page
 }
 
+// IPC handlers for navigation and state management
 ipcMain.on("load-egg-page", () => {
     console.log("Loading egg page");
     win.loadFile(path.join(__dirname, 'html', 'eggPage.html'));
@@ -67,6 +74,7 @@ ipcMain.handle('get-progress', () => {
   return savedProgress;
 });
 
+// Window control handlers
 ipcMain.on('close-window', () => {
   win.close();
 });
@@ -75,5 +83,5 @@ ipcMain.on('minimize-window', () => {
   win.minimize();
 });
 
-
+// Create window when app is ready
 app.whenReady().then(createWindow);

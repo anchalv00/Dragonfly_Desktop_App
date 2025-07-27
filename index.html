@@ -1,17 +1,25 @@
+<!--
+  index.html
+  Home page for the Dragonfly Desktop App.
+  Contains custom title bar, background music, and start button.
+-->
 <!DOCTYPE html>
 <html>
 <head>
   <title>Desktop App [Practice]</title>
+  <!-- Link to home page CSS -->
   <link rel="stylesheet" href="css/homePage.css" />
 </head>
 <body>
+    <!-- Background music (hidden by CSS) -->
     <audio controls autoplay>
         <source src="assets\audio\2-cherry-cute-bgm-271158.mp3" type="audio/ogg" loop>
         Your browser does not support the audio element.
     </audio>   
+    <!-- Start button audio -->
     <audio id="startBtnAudio" src="assets\audio\game-start-317318.mp3"></audio> 
     
-    
+    <!-- Custom draggable title bar -->
     <div class="custom-titlebar">
         <div class="drag-region">
             <span class="app-title">🐉 Dragonfly</span>
@@ -22,27 +30,24 @@
         </div>
     </div>
 
-    
-    
+    <!-- Main container for home screen -->
     <div class="home_screen_container">
         <div class="home_screen"></div>
 
         <div class="home_screen_content">
-
+            <!-- App title -->
             <div class="dragonfly_title">Dragonfly</div>
+            <!-- Dragon image -->
             <img class="red-dragon-img" src="assets\images\red-dragon.png" />
+            <!-- Start button -->
             <button class="start_btn" id="goToEggPage">
                 <span class="start_btn_text">START</span>
             </button>
-
         </div>
-
     </div>
 
-
-
+  <!-- Home page JavaScript -->
   <script src="js\homePage.js"></script>
 
 </body>
- 
 </html>

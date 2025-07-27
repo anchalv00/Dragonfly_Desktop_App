@@ -1,19 +1,26 @@
-
+<!--
+  metricsPage.html
+  Metrics Page for the Dragonfly Desktop App.
+  Shows dragon details, stats, and description.
+-->
 <!DOCTYPE html>
 <html>
 <head>
   <title>Dragonfly</title>
+  <!-- Link to metrics page CSS -->
   <link rel="stylesheet" href="../css/metricsPage.css" />
-
 </head>
 <body>
 
+  <!-- Background music (hidden by CSS) -->
   <audio controls autoplay>
       <source src="..\assets\audio\2-cherry-cute-bgm-271158.mp3" type="audio/ogg" loop>
       Your browser does not support the audio element.
   </audio>   
+  <!-- Button click audio -->
   <audio id="buttonAudio" src="..\assets\audio\button-click-289742.mp3"></audio> 
 
+  <!-- Custom draggable title bar -->
   <div class="custom-titlebar">
       <div class="drag-region">
           <span class="app-title">🐉 Dragonfly</span>
@@ -24,24 +31,24 @@
       </div>
   </div>
 
+  <!-- Main container for metrics page -->
   <div class="metric-page-container">
     <div class="inner-container"></div>
     <div class="info-container"></div>
     <div class="image-container"></div>
+    <!-- Dragon image -->
     <img class="dragon-img" id="dragonImg"/>
+    <!-- Exit button to return to dragon page -->
     <button class="exit-btn" id="exitBtn">x</button>
+    <!-- Dragon description and stats -->
     <p class="description hidden" id="description">This is a description of the dragon. can be as long as you want it to be, and it will wrap around to the next line if it exceeds the width of the container.</p>
-    
-  <p class="name hidden" id="dragonName">#name</p>
-  <p class="origin hidden" id="dragonOrigin">#origin</p>
-  <p class="type hidden" id="dragonType">#type</p>
+    <p class="name hidden" id="dragonName">#name</p>
+    <p class="origin hidden" id="dragonOrigin">#origin</p>
+    <p class="type hidden" id="dragonType">#type</p>
+  </div>
 
-
-</div>
-
-
+  <!-- Metrics page JavaScript -->
   <script src="..\js\metricsPage.js"></script>
 
 </body>
- 
 </html>
